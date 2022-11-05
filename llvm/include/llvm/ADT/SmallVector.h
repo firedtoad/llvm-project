@@ -106,7 +106,7 @@ protected:
 
 template <class T>
 using SmallVectorSizeType =
-    std::conditional_t<sizeof(T) < 4 && sizeof(void *) >= 8, uint64_t,
+    std::conditional_t<sizeof(T) < 8 && sizeof(void *) >= 8, uint64_t,
                        uint32_t>;
 
 /// Figure out the offset of the first element.
